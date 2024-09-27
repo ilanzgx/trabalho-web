@@ -12,23 +12,38 @@
       Ver produtos
     </button>
 
+    <div id="produtos-container"></div>
+
     <script>
-      let products;
+      let produtos;
       $(document).ready(() => {
         // Jquery carregado
         fetch('./data/products.json')
           .then((response) => response.json())
           .then((data) => {
-            products = data;
-            console.log(data)
+            produtos = data.produtos;
+            const container = $('#produtos-container'); 
+            console.log(produtos)
+
+            produtos.forEach((produto) => {
+              const card = `
+                <div class="card">
+                  <h2>${produto.nome}</h2>
+                  <p>R$${produto.preco}</p>
+                  <p>${produto.quantidade}</p>
+                  <p>${produto.categoria}</p>
+                </div>
+              `;
+              container.append(card);
+            });
           })
           .catch((error) => {
-            console.log(`Erro ao carregar arquivo json: ${error}`)
+            console.log(`Erro ao carregar produtos: ${error}`)
           })
       })
 
       $("#botao").click(() => {
-        alert(JSON.stringify(products))
+        alert(JSON.stringify(produtos))
       })
     </script>
   </body>
