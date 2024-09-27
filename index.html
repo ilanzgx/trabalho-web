@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Trabalho HTML/CSS/JS</h1>
+    <button id="botao">
+      Ver produtos
+    </button>
+
+    <script>
+      let products;
+      $(document).ready(() => {
+        // Jquery carregado
+        fetch('./data/products.json')
+          .then((response) => response.json())
+          .then((data) => {
+            products = data;
+            console.log(data)
+          })
+          .catch((error) => {
+            console.log(`Erro ao carregar arquivo json: ${error}`)
+          })
+      })
+
+      $("#botao").click(() => {
+        alert(JSON.stringify(products))
+      })
+    </script>
+  </body>
+</html>
