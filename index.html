@@ -7,13 +7,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/globals.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   </head>
 
   <body>
-    <h1 class="text-4xl">Trabalho HTML/CSS/JS</h1>
-    <button id="botao">
-      Ver produtos
-    </button>
+    <header class="bg-blue-700">
+      <h1 class="text-4xl text-cyan-100">Trabalho HTML/CSS/JS</h1>
+
+      <div>
+        <ul id="navbar" class="flex flex-row gap-8 text-cyan-100">
+          <li><button id="botao"><i class="fa-brands fa-shopify"></i> Ver produtos</button></li>
+          <li><i class="fa-solid fa-phone"></i> Contato</li>
+          <li><i class="fa-solid fa-circle-info"></i> Sobre</li>
+        </ul>
+      </div>
+    </header>
 
     <div id="produtos-container" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
 
