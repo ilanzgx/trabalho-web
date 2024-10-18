@@ -6,6 +6,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./css/globals.css">
+    <link rel="stylesheet" href="/css/spinner.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="preload" href="/css/tailwind-optimized.css" as="style" onload="this.rel='stylesheet'">
     <script src="/js/EnvironmentStyles.js"></script>
@@ -18,25 +19,98 @@
     <header-component></header-component>
 
     <!-- Conteudo -->
-    <div class="flex">
-      <div class="w-3/12">
-        Image
-      </div>
-      <div class="w-3/12">
-        Name
-      </div>
-      <div class="w-3/12">
-        Amount
-      </div>
-      <div class="w-3/12">
-        Price
-      </div>
+    <loading-spinner></loading-spinner>
+
+    <div id="container-cart-items" class="mb-4 py-2"></div>
+
+    <div>
+      <h1 class="text-2xl">Finalizar pedido</h1>
+      <button>Comprar</button>
     </div>
 
     <!-- Rodape -->
     <footer-component></footer-component>
 
-    <script src="./../js/components/Header.js"></script>
-    <script src="./../js/components/Footer.js"></script>
+    <script>
+      $(document).ready(async () => {
+        const cartItems = getCartItems();
+        const container = $('#container-cart-items')
+        $('.loading-container').show();
+        console.log(cartItems);
+        let total = 0;
+
+        if(cartItems.length === 0) {
+          container.html('<p>Seu carrinho está vazio!</p>')
+        }
+
+
+        await fetch('/data/products.json', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          const products = data.produtos;
+
+          cartItems.forEach(item => {
+            const product = products.find(prod => prod.id === item.productid);
+
+            if(product) {
+              const productTotal = product.preco * item.amount;
+              total += productTotal;
+
+              const cartItem = `
+                <div class="flex border-b-2 my-6">
+                  <div class="w-3/12 flex justify-center">
+                    <img class="w-40 h-40" src="${product.imagem}" />
+                  </div>
+                  <div class="w-3/12">
+                    <h1 class="text-lg">${product.nome}</h1>
+                    <h2 class="text-sm">${product.description}</h2>
+                  </div>
+                  <div class="w-3/12 flex justify-center items-center">
+                    <div>
+                      <h1 class="text-center">Quant.</h1>
+                      <div class="flex items-center">
+                        <button>
+                          <left-arrow-icon></left-arrow-icon>
+                        </button> 
+                        <h1 class="text-xl font-bold mx-2">${item.amount}</h1>
+                        <button>
+                          <right-arrow-icon></right-arrow-icon>
+                        </button>
+                      </div>
+
+                      <button class="flex items-center text-xs uppercase text-red-500 my-2">
+                        <trash-icon class="text-red-500"></trash-icon>
+                        <span class="font-bold">Remover</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="w-3/12 flex justify-center items-center">
+                    <div>
+                      <h1 class="text-sm">Preço à vista no PIX:</h1>
+                      <h2 class="text-2xl font-semibold">R$${productTotal.toFixed(2)}</h2>
+                    </div>
+                  </div>
+                </div>
+              `;
+
+              container.append(cartItem);
+            }
+          })
+        })
+        $('.loading-container').hide();
+      })
+    </script>
+
+    <script src="/js/components/icons/LeftArrow.js"></script>
+    <script src="/js/components/icons/RightArrow.js"></script>
+    <script src="/js/components/icons/Trash.js"></script>
+    <script src="/js/components/icons/Spinner.js"></script>
+    <script src="/js/components/Header.js"></script>
+    <script src="/js/components/Footer.js"></script>
   </body>
 </html>

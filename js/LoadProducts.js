@@ -1,6 +1,6 @@
 let produtos;
-$(document).ready(() => {
-  fetch('./data/products.json', {
+$(document).ready(async () => {
+  await fetch('./data/products.json', {
     method: 'GET',
     mode: 'cors',
     headers: {
@@ -12,6 +12,7 @@ $(document).ready(() => {
       produtos = data.produtos;
       const container = $('#produtos-container'); 
       container.addClass('hidden');
+      $('.loading-container').show();
 
       produtos.forEach((produto) => {
         const card = `
@@ -22,8 +23,7 @@ $(document).ready(() => {
                 <a href="/produtos/produto${produto.id}.html">
                   <img
                     class="w-full h-80" 
-                    src="${produto.imagem}" 
-                    alt="${produto.nome}" 
+                    src="${produto.imagem}"
                   />
                 </a>
                 <h1 class="text-lg font-medium mb-4">${produto.nome}</h1>
@@ -56,4 +56,6 @@ $(document).ready(() => {
     .catch((error) => {
       console.log(`Erro ao carregar produtos: ${error}`)
     })
+
+  $('.loading-container').addClass('hidden');
 })
