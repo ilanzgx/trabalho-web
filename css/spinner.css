@@ -1,0 +1,29 @@
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  margin-top: 20px;
+}
+
+.loading-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3f4f6; /* bg-gray-100 */
+  padding: 1.25rem; /* p-5 */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+}
+
+.loading-spinner {
+  width: 4rem; /* w-16 */
+  height: 4rem; /* h-16 */
+  color: #3b82f6; /* text-blue-500 */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.loading-text {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500; /* font-medium */
+  color: #4b5563; /* text-gray-700 */
+}

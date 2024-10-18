@@ -1,7 +1,6 @@
 let produtos;
-$(document).ready(() => {
-  // Jquery carregado
-  fetch('./data/products.json', {
+$(document).ready(async () => {
+  await fetch('./data/products.json', {
     method: 'GET',
     mode: 'cors',
     headers: {
@@ -13,6 +12,7 @@ $(document).ready(() => {
       produtos = data.produtos;
       const container = $('#produtos-container'); 
       container.addClass('hidden');
+      $('.loading-container').show();
 
       produtos.forEach((produto) => {
         const card = `
@@ -23,8 +23,7 @@ $(document).ready(() => {
                 <a href="/produtos/produto${produto.id}.html">
                   <img
                     class="w-full h-80" 
-                    src="${produto.imagem}" 
-                    alt="${produto.nome}" 
+                    src="${produto.imagem}"
                   />
                 </a>
                 <h1 class="text-lg font-medium mb-4">${produto.nome}</h1>
@@ -33,9 +32,12 @@ $(document).ready(() => {
                 <p>${produto.categoria}</p>
               <div>
 
-              <a class="flex justify-center items-center w-full bg-blue-600 text-white rounded font-semibold mt-5 uppercase py-1">
+              <button 
+                class="add-to-cart flex justify-center items-center w-full bg-blue-600 text-white rounded font-semibold mt-5 uppercase py-1" 
+                data-id="${produto.id}"
+              >
                 <h1 class="text-sm mx-1 font-bold">Adicionar ao carrinho</h1>
-              </a>
+              </button>
             </div>
           </div>
         `;
@@ -44,8 +46,16 @@ $(document).ready(() => {
       
       container.removeClass('hidden');
       $('footer-component').removeClass('hidden');
+
+      $('.add-to-cart').click(function() {
+        const productId = $(this).data('id');
+        addCartItem(productId, 1);
+        $('#cart-items-counter').html(getCartItemsAmount())
+      })
     })
     .catch((error) => {
       console.log(`Erro ao carregar produtos: ${error}`)
     })
+
+  $('.loading-container').addClass('hidden');
 })
