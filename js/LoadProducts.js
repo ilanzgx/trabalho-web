@@ -1,6 +1,5 @@
 let produtos;
 $(document).ready(() => {
-  // Jquery carregado
   fetch('./data/products.json', {
     method: 'GET',
     mode: 'cors',
@@ -33,9 +32,12 @@ $(document).ready(() => {
                 <p>${produto.categoria}</p>
               <div>
 
-              <a class="flex justify-center items-center w-full bg-blue-600 text-white rounded font-semibold mt-5 uppercase py-1">
+              <button 
+                class="add-to-cart flex justify-center items-center w-full bg-blue-600 text-white rounded font-semibold mt-5 uppercase py-1" 
+                data-id="${produto.id}"
+              >
                 <h1 class="text-sm mx-1 font-bold">Adicionar ao carrinho</h1>
-              </a>
+              </button>
             </div>
           </div>
         `;
@@ -44,6 +46,12 @@ $(document).ready(() => {
       
       container.removeClass('hidden');
       $('footer-component').removeClass('hidden');
+
+      $('.add-to-cart').click(function() {
+        const productId = $(this).data('id');
+        addCartItem(productId, 1);
+        $('#cart-items-counter').html(getCartItemsAmount())
+      })
     })
     .catch((error) => {
       console.log(`Erro ao carregar produtos: ${error}`)
