@@ -26,7 +26,7 @@ class SpecialHeader extends HTMLElement {
             <a href="/carrinho.html">
               <div>
                 <i class="fa-solid fa-cart-shopping fa-2x text-white"></i>
-                <span class="rounded-full bg-red-500 px-2 py-1 text-xs text-white">1</span>
+                <span class="rounded-full bg-red-500 px-2 py-1 text-xs text-white" id="cart-items-counter">${getCartItemsAmount()}</span>
               </div>
             </a>
           </div>
@@ -36,6 +36,5 @@ class SpecialHeader extends HTMLElement {
     `;
   }
 }
-
 
 customElements.define('header-component', SpecialHeader);

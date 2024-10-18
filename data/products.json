@@ -6,7 +6,8 @@
       "preco": 1500.00,
       "quantidade": 10,
       "categoria": "Eletrônicos",
-      "imagem": "./images/produto1.png"
+      "imagem": "./images/produto1.png",
+      "description": "O Smartphone é um dispositivo essencial para o dia a dia, com uma tela de alta resolução de 6.4 polegadas e processador octa-core, oferecendo desempenho rápido e eficiente. Equipado com câmeras de 48MP e 16MP, captura fotos incríveis em qualquer situação. A bateria de 4000mAh garante longas horas de uso sem recarregar, além de possuir recursos avançados como desbloqueio facial e leitor de impressões digitais. Ideal para quem busca mobilidade, conectividade e diversão em um único aparelho."
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "preco": 3500.00,
       "quantidade": 5,
       "categoria": "Eletrônicos",
-      "imagem": "./images/produto2.png"
+      "imagem": "./images/produto2.png",
+      "description": "Este Notebook de última geração oferece desempenho superior para profissionais e gamers. Com uma tela de 15.6 polegadas Full HD, processador Intel i7 de 10ª geração e 16GB de RAM, ele é capaz de rodar aplicativos pesados e jogos com gráficos intensos sem perder a fluidez. O SSD de 512GB garante velocidade de inicialização e carregamento. Com design moderno e leve, é o equipamento perfeito para produtividade e entretenimento em qualquer lugar."
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "preco": 750.00,
       "quantidade": 7,
       "categoria": "Móveis",
-      "imagem": "./images/produto3.png"
+      "imagem": "./images/produto3.png",
+      "description": "A Cadeira Gamer foi projetada para oferecer conforto durante longas sessões de jogos ou trabalho. Com apoio lombar ajustável e almofadas para cabeça, ela se adapta ao seu corpo, proporcionando ergonomia ideal. Feita com materiais de alta qualidade e um revestimento de couro sintético resistente, a cadeira suporta até 150kg. Possui inclinação ajustável e rodízios para facilitar a movimentação, tornando-se o item indispensável para qualquer setup gamer ou escritório."
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "preco": 200.00,
       "quantidade": 20,
       "categoria": "Acessórios",
-      "imagem": "./images/produto4.png"
+      "imagem": "./images/produto4.png",
+      "description": "O Fone de Ouvido proporciona uma experiência de som imersiva com seus drivers de alta definição. Com tecnologia de cancelamento de ruído, ele bloqueia sons externos, permitindo que você se concentre totalmente na música, chamadas ou jogos. O design confortável e leve garante que você possa usá-lo por longas horas sem incômodos. Equipado com microfone embutido, é ideal para quem busca qualidade de som e conveniência em qualquer lugar."
     },
     {
       "id": 5,
@@ -38,7 +42,8 @@
       "preco": 300.00,
       "quantidade": 15,
       "categoria": "Eletrodomésticos",
-      "imagem": "./images/produto5.png"
+      "imagem": "./images/produto5.png",
+      "description": "A Cafeteira moderna é ideal para os amantes de café que desejam praticidade e sabor em casa. Com capacidade para preparar até 10 xícaras de café, ela possui sistema de gotejamento e filtro reutilizável, o que facilita o preparo. Seu design elegante se adapta a qualquer cozinha, e a função de desligamento automático proporciona segurança e economia de energia. Tenha um café fresquinho e saboroso a qualquer hora do dia!"
     }
   ]
 }

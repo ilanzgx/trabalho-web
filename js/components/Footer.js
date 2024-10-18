@@ -7,7 +7,7 @@ class SpecialFooter extends HTMLElement {
             Rodape
           </div>
           <div class="w-1/3">
-            Rodape
+            © Todos os Direitos Reservados
           </div>
           <div class="w-1/3">
             Rodape
