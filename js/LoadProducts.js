@@ -33,7 +33,7 @@ $(document).ready(async () => {
               <div>
 
               <button 
-                class="add-to-cart flex justify-center items-center w-full bg-blue-600 text-white rounded font-semibold mt-5 uppercase py-1" 
+                class="add-to-cart flex justify-center items-center w-full bg-blue-600 hover:bg-blue-700 transition-colors text-white rounded font-semibold mt-5 uppercase py-1" 
                 data-id="${produto.id}"
               >
                 <h1 class="text-sm mx-1 font-bold">Adicionar ao carrinho</h1>
@@ -50,6 +50,7 @@ $(document).ready(async () => {
       $('.add-to-cart').click(function() {
         const productId = $(this).data('id');
         addCartItem(productId, 1);
+        alert('Item adicionado ao carrinho!');
         $('#cart-items-counter').html(getCartItemsAmount())
       })
     })

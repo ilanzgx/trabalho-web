@@ -1,16 +1,30 @@
 class SpecialFooter extends HTMLElement {
+  getYear
+
   connectedCallback() {
     this.innerHTML = `
-      <footer class="bg-blue-600 text-white px-6 py-2">
+      <footer class="bg-blue-700 text-gray-200 px-6 py-2">
         <div class="flex">
-          <div class="w-1/3">
+          <div class="w-1/3 flex items-center">
+            <p>Todos os direitos reservados &copy; 2024</p>
+          </div>
+          <div class="w-1/3 flex items-center">
             Rodape
           </div>
-          <div class="w-1/3">
-            © Todos os Direitos Reservados
-          </div>
-          <div class="w-1/3">
-            Rodape
+          <div class="w-1/3 flex items-center">
+            <ul class="text-sm font-medium">
+              <li>
+                <a class="hover:text-gray-50 transition-colors" href="/sobre.html">Sobre nós</a>
+              </li>
+
+              <li>
+                <a class="hover:text-gray-50 transition-colors" href="/contato.html">Contato</a>
+              </li>
+
+              <li>
+                <a class="hover:text-gray-50 transition-colors" href="/sobre.html">Outros</a>
+              </li>
+            </ul>
           </div>
         </div>
       </footer>

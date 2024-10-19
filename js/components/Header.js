@@ -1,40 +1,56 @@
 class SpecialHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <header class="bg-blue-600">
-        <div class="flex items-center">
-          <div class="w-1/2">
+      <header class="text-gray-200">
+        <div class="flex bg-blue-700 text-center py-2">
+          <div class="flex w-3/12 items-center justify-end px-10">
             <a href="/index.html">
-              <h1 class="text-4xl text-cyan-100">Trabalho HTML/CSS/JS</h1>
+              <h1 class="text-3xl">Loja virtual</h1>
             </a>
-            <ul id="navbar" class="flex flex-row gap-8 text-cyan-100">
-              <li>
-                <a href="/contato.html">
-                  <i class="fa-solid fa-phone"></i>
-                  <span class="mx-1 font-bold">Contato</span>
-                </a>
-              </li>
-              <li>
-                <a href="/sobre.html">
-                  <i class="fa-solid fa-circle-info"></i>
-                  <span class="mx-1 font-bold">Sobre nós</span>
-                </a>
-              </li>
-            </ul>
           </div>
-          <div class="w-1/2 flex items-center justify-end mx-4">
+          <div class="relative flex w-5/12 items-center justify-end px-2">
+            <input placeholder="Pesquise o seu produto" class="w-full rounded-lg border border-gray-400 py-3 pl-3 pr-16 text-gray-900" />
+            <img src="/images/search.svg" class="absolute mr-2 w-10 cursor-pointer" width="30" height="30" />
+          </div>
+          <div class="flex w-2/12 items-center justify-center">
+            <div class="flex items-center p-1">
+              <div class="flex w-1/2 justify-center">
+                <img src="/images/user.svg" width="30" height="30" />
+              </div>
+              <div class="w-1/2 pr-4">
+                <p class="text-xs md:text-sm">Olá, <span class="font-bold cursor-pointer">Entre</span> ou <span class="font-bold cursor-pointer">Cadastra-se</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="flex w-2/12 items-center px-6">
             <a href="/carrinho.html">
-              <div>
-                <i class="fa-solid fa-cart-shopping fa-2x text-white"></i>
+              <div class="flex items-center">
+                <img src="/images/cart.svg" />
                 <span class="rounded-full bg-red-500 px-2 py-1 text-xs text-white" id="cart-items-counter">${getCartItemsAmount()}</span>
               </div>
             </a>
           </div>
-    
+        </div>
+        <div class="bg-blue-800 flex justify-around py-2 px-1">
+          <div>
+            <button class="uppercase font-bold hover:text-gray-50 transition-colors">Promoções</button>
+          </div>
+
+          <div>
+            <button class="uppercase font-bold hover:text-gray-50 transition-colors">Mais vendidos</button>
+          </div>
+
+          <div>
+            <button class="uppercase font-bold hover:text-gray-50 transition-colors">Novidades</button>
+          </div>
+
+          <div>
+            <button class="uppercase font-bold hover:text-gray-50 transition-colors">Preço</button>
+          </div>
         </div>
       </header>
     `;
   }
 }
 
-customElements.define('header-component', SpecialHeader);
+customElements.define("header-component", SpecialHeader);
