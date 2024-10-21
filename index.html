@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Virtual</title>
+    <title>Loja Virtual // Inicio</title>
 
     <link rel="stylesheet" href="/css/globals.css">
     <link rel="stylesheet" href="/css/spinner.css">
@@ -13,22 +13,21 @@
 
     <script src="/js/Cart.js"></script>
   </head>
-
   <body>
     <!-- Cabeçalho -->
     <header-component></header-component>
 
     <!-- Conteudo -->
-    <loading-spinner></loading-spinner>
-    
-    <div id="produtos-container" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+    <main>
+      <div id="content"></div>
+    </main>
 
     <!-- Rodape -->
     <footer-component class="hidden"></footer-component>
 
+    <script src="/js/components/Spinner.js"></script>
+    <script src="/js/LoadContent.js"></script>
     <script src="/js/components/Header.js"></script>
     <script src="/js/components/Footer.js"></script>
-    <script src="/js/components/icons/Spinner.js"></script>
-    <script src="/js/LoadProducts.js"></script>
   </body>
 </html>
