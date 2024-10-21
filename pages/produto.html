@@ -1,0 +1,39 @@
+<!-- Conteudo -->
+<div class="container mx-auto my-6">
+  <h1 id="product-name" class="text-gray-800 text-2xl font-semibold"></h1>
+  <div class="flex">
+    <div class="w-1/2 flex justify-center">
+      <img 
+        id="product-image"
+        class="w-60 h-60"
+      />
+    </div>
+
+    <div class="w-1/2 flex items-center justify-center">
+      <div>
+        <h1>Vendido e entregue por: Loja Virtual</h1>
+        <h2 id="product-amount"></h2>
+
+        <div class="flex">
+          <div class="w-1/2 pr-4">
+            <h2 id="product-price" class="text-4xl font-bold"></h2>
+          </div>
+          <div class="w-1/2 px-4">
+            <button class="flex justify-center items-center w-full h-full bg-blue-600 hover:bg-blue-800 transition-colors text-white rounded font-semibold uppercase py-2 px-8">
+              <img src="/images/icons/cart.svg" width="25" height="25" />
+              <h1 class="text-sm mx-1 font-bold">Comprar</h1>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t-2 my-4">
+    <h1 class="text-xl mt-4">Informações do produto:</h1>
+    <h2 id="product-name" class="font-bold text-xl"></h2>
+    <p id="product-description"></p>
+  </div>
+</div>
+
+<script src="/js/LoadProductDetails.js"></script>
