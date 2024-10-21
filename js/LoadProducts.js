@@ -24,7 +24,7 @@ $(document).ready(async () => {
               <div class="cursor-pointer">
                 <a href="#produto/${produto.id}">
                   <img
-                    class="w-full rounded-t-[0.625rem] h-[300px] rounded-b-none" 
+                    class="w-full h-72" 
                     src="${produto.imagem}"
                     loading="lazy"
                   />
