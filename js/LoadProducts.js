@@ -19,14 +19,13 @@ $(document).ready(async () => {
 
       produtos.forEach((produto) => {
         const card = `
-          <div class="card bg-gray-100 py-2 px-3 m-2 rounded shadow-md">
+          <div class="card bg-gray-100 py-2 px-3 mx-2 my-2 rounded shadow-md">
             <div class="flex flex-col">
               <div class="cursor-pointer">
                 <a href="#produto/${produto.id}">
                   <img
                     class="w-full h-72" 
                     src="${produto.imagem}"
-                    loading="lazy"
                   />
                 </a>
                 <h1 class="text-lg font-medium mb-4">${produto.nome}</h1>
