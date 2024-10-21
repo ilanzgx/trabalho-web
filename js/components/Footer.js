@@ -14,15 +14,15 @@ class SpecialFooter extends HTMLElement {
           <div class="w-1/3 flex items-center">
             <ul class="text-sm font-medium">
               <li>
-                <a class="hover:text-gray-50 transition-colors" href="/sobre.html">Sobre nós</a>
+                <a class="hover:text-gray-50 transition-colors" href="#sobre">Sobre nós</a>
               </li>
 
               <li>
-                <a class="hover:text-gray-50 transition-colors" href="/contato.html">Contato</a>
+                <a class="hover:text-gray-50 transition-colors" href="#contato">Contato</a>
               </li>
 
               <li>
-                <a class="hover:text-gray-50 transition-colors" href="/sobre.html">Outros</a>
+                <a class="hover:text-gray-50 transition-colors" href="#outros">Outros</a>
               </li>
             </ul>
           </div>
