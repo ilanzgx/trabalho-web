@@ -25,6 +25,8 @@ function removeCartItem(productid) {
   let cartItems = getCartItems();
   cartItems = cartItems.filter(item => item.productid !== productid);
   localStorage.setItem('@Cart:items', JSON.stringify(cartItems));
+
+  $('#cart-items-counter').html(getCartItemsAmount());
 }
 
 function updateCartItemAmount(productid, change) {
@@ -41,6 +43,5 @@ function updateCartItemAmount(productid, change) {
     localStorage.setItem('@Cart:items', JSON.stringify(cartItems));
 
     $('#cart-items-counter').html(getCartItemsAmount());
-    location.reload();
   }
 }

@@ -17,14 +17,14 @@ $(document).ready(() => {
               <div class="cursor-pointer">
                 <a href="#produto/${produto.id}">
                   <img
-                    class="w-full h-72" 
+                    class="w-full h-52" 
                     src="${produto.imagem}"
                   />
+                
+                  <h1 class="text-lg font-medium mb-4">${produto.nome}</h1>
+                  <p class="text-2xl font-bold">R$${produto.preco}</p>
+                  <p>${produto.quantidade} restantes</p>
                 </a>
-                <h1 class="text-lg font-medium mb-4">${produto.nome}</h1>
-                <p class="text-2xl font-bold">R$${produto.preco}</p>
-                <p>${produto.quantidade} restantes</p>
-                <p>${produto.categoria}</p>
               <div>
 
               <button 
