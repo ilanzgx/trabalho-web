@@ -1,15 +1,14 @@
 $(document).ready(function() {  
-  const $contentPlaceholder = $('#content');    
+  const contentElement = $('#content');    
 
-  // Função para carregar conteúdo de uma página HTML dentro do layout  
   function loadPage(page) {  
     $.get(page)  
       .done(function(data) {  
-        $contentPlaceholder.html(data);  
+        contentElement.html(data);  
       })  
       .fail(function(error) {  
         console.error(`Erro ao carregar a página: ${error}`);  
-        $contentPlaceholder.html('<p>Erro ao carregar a página.</p>');  
+        contentElement.html('<p>Erro ao carregar a página.</p>');  
       });  
   }  
 

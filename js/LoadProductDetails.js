@@ -25,4 +25,7 @@ $(document).ready(function() {
   } else {
     $('#product-error').html('<p>ID de produto inválido.</p>');
   }
+
+  $('.product-container').removeClass('hidden');
+  $('.loading-container').addClass('hidden');
 });
