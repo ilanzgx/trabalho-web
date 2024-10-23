@@ -16,13 +16,26 @@ $(document).ready(function() {
         $('#product-price').text(`R$${produto.preco}`);
         $('#product-description').text(produto.description);
         $('#product-amount').text(`Em estoque (${produto.quantidade})`);
+
+        $('.add-to-cart').attr('data-id', produto.id);
       } else {
         $('#product-erro').html('<p>Produto não encontrado.</p>');
       }
+
+      $('.add-to-cart').click(function() {
+        const productId = $(this).data('id');
+        addCartItem(productId, 1);
+        alert('Item adicionado ao carrinho!');
+        $('#cart-items-counter').html(getCartItemsAmount())
+      });
+
     }).fail(function() {
       $('#product-error').html('<p>Erro ao carregar os dados do produto.</p>');
     });
   } else {
     $('#product-error').html('<p>ID de produto inválido.</p>');
   }
+
+  $('.product-container').removeClass('hidden');
+  $('.loading-container').addClass('hidden');
 });

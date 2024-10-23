@@ -2,16 +2,9 @@ if (typeof produtos === 'undefined') {
   var produtos;
 }
 
-$(document).ready(async () => {
-  await fetch('./data/products.json', {
-    method: 'GET',
-    mode: 'cors',
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
-    .then((response) => response.json())
-    .then((data) => {
+$(document).ready(() => {
+  $.getJSON('./data/products.json')
+    .done((data) => {
       produtos = data.produtos;
       const container = $('#produtos-container'); 
       container.addClass('hidden');
@@ -24,14 +17,14 @@ $(document).ready(async () => {
               <div class="cursor-pointer">
                 <a href="#produto/${produto.id}">
                   <img
-                    class="w-full h-72" 
+                    class="w-full h-52" 
                     src="${produto.imagem}"
                   />
+                
+                  <h1 class="text-lg font-medium mb-4">${produto.nome}</h1>
+                  <p class="text-2xl font-bold">R$${produto.preco}</p>
+                  <p>${produto.quantidade} restantes</p>
                 </a>
-                <h1 class="text-lg font-medium mb-4">${produto.nome}</h1>
-                <p class="text-2xl font-bold">R$${produto.preco}</p>
-                <p>${produto.quantidade} restantes</p>
-                <p>${produto.categoria}</p>
               <div>
 
               <button 
@@ -48,6 +41,7 @@ $(document).ready(async () => {
       });
       
       container.removeClass('hidden');
+      $('.loading-container').addClass('hidden');
       $('footer-component').removeClass('hidden');
 
       $('.add-to-cart').click(function() {
@@ -55,11 +49,9 @@ $(document).ready(async () => {
         addCartItem(productId, 1);
         alert('Item adicionado ao carrinho!');
         $('#cart-items-counter').html(getCartItemsAmount())
-      })
+      });
     })
-    .catch((error) => {
-      console.log(`Erro ao carregar produtos: ${error}`)
-    })
-
-  $('.loading-container').addClass('hidden');
-})
+    .fail((error) => {
+      console.log(`Erro ao carregar produtos: ${error}`);
+    });
+});

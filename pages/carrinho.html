@@ -1,11 +1,34 @@
 <!-- Conteudo -->
 <loading-spinner></loading-spinner>
 
-<div id="container-cart-items" class="mb-4 py-2"></div>
-
-<div>
-  <h1 class="text-2xl">Finalizar pedido</h1>
-  <button>Comprar</button>
+<div class="flex">
+  <div class="w-4/5 mb-4 py-2" id="container-cart-items"></div>
+  <div class="w-1/5 mb-4 py-2 text-center mx-10">
+    <div class="border py-6">
+      <h1 class="text-xl border-b-2 pb-6">Resumo</h1>
+      <!-- Subtotal -->
+      <div class="flex items-center mt-4 py-6">
+        <div class="w-1/2">
+          <h3 class="">Subtotal</h3>
+        </div>
+        <div class="w-1/2">
+          <h3 class="cart-total">R$0</h3>
+        </div>
+      </div>
+      <!-- Total -->
+      <div class="flex items-center bg-gray-200 py-6">
+        <div class="w-1/2">
+          <h2 class="text-2xl">Total</h2>
+        </div>
+        <div class="w-1/2">
+          <h2 class="text-2xl cart-total">R$0</h2>
+        </div>
+      </div>
+    </div>
+    <button class="bg-green-600 hover:bg-green-700 transition-colors rounded-lg py-4 uppercase text-lg text-white w-full mt-4">
+      Finalizar pedido
+    </button>
+  </div>
 </div>
 
 <script src="/js/LoadCart.js"></script>
