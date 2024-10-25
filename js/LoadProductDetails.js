@@ -29,13 +29,13 @@ $(document).ready(function() {
         $('#cart-items-counter').html(getCartItemsAmount())
       });
 
+      $('.product-container').removeClass('hidden');
+      $('.loading-container').addClass('hidden');
+
     }).fail(function() {
       $('#product-error').html('<p>Erro ao carregar os dados do produto.</p>');
     });
   } else {
     $('#product-error').html('<p>ID de produto inválido.</p>');
   }
-
-  $('.product-container').removeClass('hidden');
-  $('.loading-container').addClass('hidden');
 });

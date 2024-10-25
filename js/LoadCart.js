@@ -2,12 +2,15 @@ $(document).ready(() => {
   function updateCart() {
     const cartItems = getCartItems();
     const container = $('#container-cart-items');
+    $('footer-component').addClass('hidden');
     container.empty();
     let total = 0;
 
     if (cartItems.length === 0) {
       container.html('<p class="text-center py-12 text-lg">Nenhum produto no seu carrinho.</p>');
       $('.cart-total').html(`<span class="mr-1">R$</span>0.00`);
+      $('.loading-container').addClass('hidden');
+      $('footer-component').removeClass('hidden');
       return;
     }
 
@@ -84,14 +87,15 @@ $(document).ready(() => {
         })
 
         $('.cart-total').html(`<span class="mr-1">R$</span>${total.toFixed(2)}`);
+        $('.loading-container').addClass('hidden');
+        $('footer-component').removeClass('hidden');
       })
       .fail((error) => {
         console.log(`Erro ao carregar produtos: ${error}`);
       });
   }
 
-  updateCart();
+  //
 
-  $('.loading-container').hide();
-  $('footer-component').removeClass('hidden');
+  updateCart();
 });
