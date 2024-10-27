@@ -8,7 +8,7 @@ class SpecialHeader extends HTMLElement {
               <h1 class="text-3xl">Loja virtual</h1>
             </a>
           </div>
-          <div class="relative flex w-5/12 items-center justify-end px-2">
+          <div class="relative hidden sm:flex sm:w-5/12 items-center justify-end px-2">
             <input id="search-bar" placeholder="Pesquise o seu produto" class="w-full rounded-lg border border-gray-400 py-3 pl-3 pr-16 text-gray-900" />
             <img src="/images/icons/search.svg" class="absolute mr-2 w-10 cursor-pointer" width="30" height="30" />
           </div>
