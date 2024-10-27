@@ -71,3 +71,19 @@ $(document).ready(() => {
   });
   
 });
+
+// Função para gerar o HTML das estrelas de avaliação
+function generateStars(rating) {
+  const maxStars = 5;
+  let starsHtml = '';
+
+  for (let i = 0; i < maxStars; i++) {
+    if (i < rating) {
+      starsHtml += '<img src="/images/icons/star-filled.svg" width="20" height="20" alt="Estrela preenchida" />';
+    } else {
+      starsHtml += '<img src="/images/icons/star-empty.svg" width="20" height="20" alt="Estrela vazia" />';
+    }
+  }
+
+  return starsHtml;
+}

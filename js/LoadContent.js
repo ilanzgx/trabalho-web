@@ -15,24 +15,26 @@ $(document).ready(function() {
   function checkHash() {
     const hash = window.location.hash;
     const baseDir = './pages/';
-
-    if (hash === '' || hash === '#inicio' || window.location.pathname.endsWith('index.html')) {
-      loadPage(`${baseDir}inicio.html`);
-    } 
-    else if (hash.startsWith('#produto/')) {
-      loadPage(`${baseDir}produto.html`);
-    } 
-    else if (hash === '#sobre') {
-      loadPage(`${baseDir}sobre.html`);
-    } 
-    else if (hash === '#contato') {
-      loadPage(`${baseDir}contato.html`);
-    } 
-    else if (hash === '#carrinho') {
-      loadPage(`${baseDir}carrinho.html`);
-    } 
-    else {
-      loadPage(`${baseDir}404.html`);
+  
+    switch (true) {
+      case (hash === '' || hash === '#inicio'):
+        loadPage(`${baseDir}inicio.html`);
+        break;
+      case hash.startsWith('#produto/'):
+        loadPage(`${baseDir}produto.html`);
+        break;
+      case hash === '#sobre':
+        loadPage(`${baseDir}sobre.html`);
+        break;
+      case hash === '#contato':
+        loadPage(`${baseDir}contato.html`);
+        break;
+      case hash === '#carrinho':
+        loadPage(`${baseDir}carrinho.html`);
+        break;
+      default:
+        loadPage(`${baseDir}404.html`);
+        break;
     }
   }
 
