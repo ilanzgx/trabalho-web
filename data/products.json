@@ -7,7 +7,8 @@
       "quantidade": 10,
       "categoria": "Eletrônicos",
       "imagem": "/images/produto1.png",
-      "description": "O Smartphone é um dispositivo essencial para o dia a dia, com uma tela de alta resolução de 6.4 polegadas e processador octa-core, oferecendo desempenho rápido e eficiente. Equipado com câmeras de 48MP e 16MP, captura fotos incríveis em qualquer situação. A bateria de 4000mAh garante longas horas de uso sem recarregar, além de possuir recursos avançados como desbloqueio facial e leitor de impressões digitais. Ideal para quem busca mobilidade, conectividade e diversão em um único aparelho."
+      "description": "O Smartphone é um dispositivo essencial para o dia a dia, com uma tela de alta resolução de 6.4 polegadas e processador octa-core, oferecendo desempenho rápido e eficiente. Equipado com câmeras de 48MP e 16MP, captura fotos incríveis em qualquer situação. A bateria de 4000mAh garante longas horas de uso sem recarregar, além de possuir recursos avançados como desbloqueio facial e leitor de impressões digitais. Ideal para quem busca mobilidade, conectividade e diversão em um único aparelho.",
+      "estrelas": 5
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "quantidade": 5,
       "categoria": "Eletrônicos",
       "imagem": "/images/produto2.png",
-      "description": "Este Notebook de última geração oferece desempenho superior para profissionais e gamers. Com uma tela de 15.6 polegadas Full HD, processador Intel i7 de 10ª geração e 16GB de RAM, ele é capaz de rodar aplicativos pesados e jogos com gráficos intensos sem perder a fluidez. O SSD de 512GB garante velocidade de inicialização e carregamento. Com design moderno e leve, é o equipamento perfeito para produtividade e entretenimento em qualquer lugar."
+      "description": "Este Notebook de última geração oferece desempenho superior para profissionais e gamers. Com uma tela de 15.6 polegadas Full HD, processador Intel i7 de 10ª geração e 16GB de RAM, ele é capaz de rodar aplicativos pesados e jogos com gráficos intensos sem perder a fluidez. O SSD de 512GB garante velocidade de inicialização e carregamento. Com design moderno e leve, é o equipamento perfeito para produtividade e entretenimento em qualquer lugar.",
+      "estrelas": 5
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "quantidade": 7,
       "categoria": "Móveis",
       "imagem": "./images/produto3.png",
-      "description": "A Cadeira Gamer foi projetada para oferecer conforto durante longas sessões de jogos ou trabalho. Com apoio lombar ajustável e almofadas para cabeça, ela se adapta ao seu corpo, proporcionando ergonomia ideal. Feita com materiais de alta qualidade e um revestimento de couro sintético resistente, a cadeira suporta até 150kg. Possui inclinação ajustável e rodízios para facilitar a movimentação, tornando-se o item indispensável para qualquer setup gamer ou escritório."
+      "description": "A Cadeira Gamer foi projetada para oferecer conforto durante longas sessões de jogos ou trabalho. Com apoio lombar ajustável e almofadas para cabeça, ela se adapta ao seu corpo, proporcionando ergonomia ideal. Feita com materiais de alta qualidade e um revestimento de couro sintético resistente, a cadeira suporta até 150kg. Possui inclinação ajustável e rodízios para facilitar a movimentação, tornando-se o item indispensável para qualquer setup gamer ou escritório.",
+      "estrelas": 4
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "quantidade": 20,
       "categoria": "Acessórios",
       "imagem": "./images/produto4.png",
-      "description": "O Fone de Ouvido proporciona uma experiência de som imersiva com seus drivers de alta definição. Com tecnologia de cancelamento de ruído, ele bloqueia sons externos, permitindo que você se concentre totalmente na música, chamadas ou jogos. O design confortável e leve garante que você possa usá-lo por longas horas sem incômodos. Equipado com microfone embutido, é ideal para quem busca qualidade de som e conveniência em qualquer lugar."
+      "description": "O Fone de Ouvido proporciona uma experiência de som imersiva com seus drivers de alta definição. Com tecnologia de cancelamento de ruído, ele bloqueia sons externos, permitindo que você se concentre totalmente na música, chamadas ou jogos. O design confortável e leve garante que você possa usá-lo por longas horas sem incômodos. Equipado com microfone embutido, é ideal para quem busca qualidade de som e conveniência em qualquer lugar.",
+      "estrelas": 4
     },
     {
       "id": 5,
@@ -43,70 +47,78 @@
       "quantidade": 15,
       "categoria": "Eletrodomésticos",
       "imagem": "./images/produto5.png",
-      "description": "A Cafeteira moderna é ideal para os amantes de café que desejam praticidade e sabor em casa. Com capacidade para preparar até 10 xícaras de café, ela possui sistema de gotejamento e filtro reutilizável, o que facilita o preparo. Seu design elegante se adapta a qualquer cozinha, e a função de desligamento automático proporciona segurança e economia de energia. Tenha um café fresquinho e saboroso a qualquer hora do dia!"
+      "description": "A Cafeteira moderna é ideal para os amantes de café que desejam praticidade e sabor em casa. Com capacidade para preparar até 10 xícaras de café, ela possui sistema de gotejamento e filtro reutilizável, o que facilita o preparo. Seu design elegante se adapta a qualquer cozinha, e a função de desligamento automático proporciona segurança e economia de energia. Tenha um café fresquinho e saboroso a qualquer hora do dia!",
+      "estrelas": 3
     },
     {  
-        "id": 6,  
-        "nome": "Controle Xbox",  
-        "preco": 400.00,  
-        "quantidade": 15,  
-        "categoria": "Acessórios",  
-        "imagem": "./images/produto6.png",  
-        "description": "O Controle Xbox proporciona um jogo dinâmico e intuitivo, com design ergonômico que garante conforto durante longas sessões. Compatível com diversos dispositivos, ele possui botões responsivos e uma conexão estável, além de tecnologia de vibração para uma experiência imersiva no mundo dos jogos."  
-    },  
-    {  
-        "id": 7,  
-        "nome": "Headset Gamer",  
-        "preco": 300.00,  
-        "quantidade": 25,  
-        "categoria": "Acessórios",  
-        "imagem": "./images/produto7.png",  
-        "description": "O Headset Gamer oferece som de alta qualidade e conforto excepcional com almofadas macias. Seu microfone com cancelamento de ruído permite comunicação clara durante os jogos. Com iluminação RGB e design robusto, é a escolha perfeita para jogadores que buscam qualidade e estilo."  
-    },  
-    {  
-        "id": 8,  
-        "nome": "PC Gamer",  
-        "preco": 5000.00,  
-        "quantidade": 10,  
-        "categoria": "Computadores",  
-        "imagem": "./images/produto8.png",  
-        "description": "O PC Gamer é um equipamento de alto desempenho, projetado para jogos de última geração. Com processador potente, placa de vídeo dedicada, e memória RAM expansiva, ele garante gráficos impressionantes e um desempenho suave. Ideal para gamers que exigem qualidade e velocidade em suas partidas."  
+      "id": 6,  
+      "nome": "Controle Xbox",  
+      "preco": 400.00,  
+      "quantidade": 15,  
+      "categoria": "Acessórios",  
+      "imagem": "./images/produto6.png",  
+      "description": "O Controle Xbox proporciona um jogo dinâmico e intuitivo, com design ergonômico que garante conforto durante longas sessões. Compatível com diversos dispositivos, ele possui botões responsivos e uma conexão estável, além de tecnologia de vibração para uma experiência imersiva no mundo dos jogos.",
+      "estrelas": 4
     },
     {  
-        "id": 9,  
-        "nome": "Placa Mãe",  
-        "preco": 600.00,  
-        "quantidade": 12,  
-        "categoria": "Componentes",  
-        "imagem": "./images/produto9.png",  
-        "description": "A Placa Mãe é o componente central do computador, oferecendo conectividade e suporte a diversos periféricos. Com recursos avançados e opções de expansão, ela garante estabilidade e performance para montagens voltadas para jogos e tarefas profissionais. Compatível com as últimas gerações de processadores, é ideal para quem busca potência e versatilidade."  
-    },  
+      "id": 7,  
+      "nome": "Headset Gamer",  
+      "preco": 300.00,  
+      "quantidade": 25,  
+      "categoria": "Acessórios",  
+      "imagem": "./images/produto7.png",  
+      "description": "O Headset Gamer oferece som de alta qualidade e conforto excepcional com almofadas macias. Seu microfone com cancelamento de ruído permite comunicação clara durante os jogos. Com iluminação RGB e design robusto, é a escolha perfeita para jogadores que buscam qualidade e estilo.",
+      "estrelas": 5
+    },
     {  
-        "id": 10,  
-        "nome": "Placa de Vídeo GTX 1050 Ti",  
-        "preco": 1200.00,  
-        "quantidade": 8,  
-        "categoria": "Componentes",  
-        "imagem": "./images/produto10.png",  
-        "description": "A Placa de Vídeo GTX 1050 Ti oferece excelente desempenho em jogos com alta definição e taxas de quadros suaves. Com tecnologia NVIDIA, ela suporta recursos como VR e DirectX 12, proporcionando uma experiência imersiva. É uma ótima opção para gamers que buscam qualidade sem comprometer o orçamento."  
-    },  
+      "id": 8,  
+      "nome": "PC Gamer",  
+      "preco": 5000.00,  
+      "quantidade": 10,  
+      "categoria": "Computadores",  
+      "imagem": "./images/produto8.png",  
+      "description": "O PC Gamer é um equipamento de alto desempenho, projetado para jogos de última geração. Com processador potente, placa de vídeo dedicada, e memória RAM expansiva, ele garante gráficos impressionantes e um desempenho suave. Ideal para gamers que exigem qualidade e velocidade em suas partidas.",
+      "estrelas": 5
+    },
     {  
-        "id": 11,  
-        "nome": "Memória RAM HyperX",  
-        "preco": 400.00,  
-        "quantidade": 20,  
-        "categoria": "Componentes",  
-        "imagem": "./images/produto11.png",  
-        "description": "A Memória RAM HyperX é projetada para oferecer desempenho superior em jogos e multitarefas. Com alta velocidade e baixa latência, ela garante que seu sistema opere de forma fluida e responsiva. Ideal para entusiastas e gamers, é fácil de instalar e compatível com diversas placas mães."  
-    },  
+      "id": 9,  
+      "nome": "Placa Mãe",  
+      "preco": 600.00,  
+      "quantidade": 12,  
+      "categoria": "Componentes",  
+      "imagem": "./images/produto9.png",  
+      "description": "A Placa Mãe é o componente central do computador, oferecendo conectividade e suporte a diversos periféricos. Com recursos avançados e opções de expansão, ela garante estabilidade e performance para montagens voltadas para jogos e tarefas profissionais. Compatível com as últimas gerações de processadores, é ideal para quem busca potência e versatilidade.",
+      "estrelas": 4
+    },
     {  
-        "id": 12,  
-        "nome": "Processador Intel i7",  
-        "preco": 2200.00,  
-        "quantidade": 10,  
-        "categoria": "Componentes",  
-        "imagem": "./images/produto12.png",  
-        "description": "O Processador Intel i7 é uma das melhores opções para desempenho excepcional em jogos e aplicações pesadas. Com múltiplos núcleos e threads, ele proporciona velocidade e eficiência em tarefas paralelas. Ideal para quem busca uma experiência de computação de alto nível, seja para jogos, criação de conteúdo ou trabalho profissional."  
-    }  
+      "id": 10,  
+      "nome": "Placa de Vídeo GTX 1050 Ti",  
+      "preco": 1200.00,  
+      "quantidade": 8,  
+      "categoria": "Componentes",  
+      "imagem": "./images/produto10.png",  
+      "description": "A Placa de Vídeo GTX 1050 Ti oferece excelente desempenho em jogos com alta definição e taxas de quadros suaves. Com tecnologia NVIDIA, ela suporta recursos como VR e DirectX 12, proporcionando uma experiência imersiva. É uma ótima opção para gamers que buscam qualidade sem comprometer o orçamento.",
+      "estrelas": 4
+    },
+    {  
+      "id": 11,  
+      "nome": "Memória RAM HyperX",  
+      "preco": 400.00,  
+      "quantidade": 20,  
+      "categoria": "Componentes",  
+      "imagem": "./images/produto11.png",  
+      "description": "A Memória RAM HyperX é projetada para oferecer desempenho superior em jogos e multitarefas. Com alta velocidade e baixa latência, ela garante que seu sistema opere de forma fluida e responsiva. Ideal para entusiastas e gamers, é fácil de instalar e compatível com diversas placas mães.",
+      "estrelas": 5
+    },
+    {  
+      "id": 12,  
+      "nome": "Processador Intel i7",  
+      "preco": 2200.00,  
+      "quantidade": 10,  
+      "categoria": "Componentes",  
+      "imagem": "./images/produto12.png",  
+      "description": "O Processador Intel i7 é uma das melhores opções para desempenho excepcional em jogos e aplicações pesadas. Com múltiplos núcleos e threads, ele proporciona velocidade e eficiência em tarefas paralelas. Ideal para quem busca uma experiência de computação de alto nível, seja para jogos, criação de conteúdo ou trabalho profissional.",
+      "estrelas": 5
+    }
   ]
 }
