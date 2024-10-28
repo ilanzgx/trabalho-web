@@ -1,7 +1,28 @@
 <!-- Conteudo -->
 <loading-spinner></loading-spinner>
 
-<div id="produtos-container" class="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4"></div>
+<div id="produtos-container" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"></div>
 <ul id="search-result" class="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4"></ul>
+
+<div id="modal" class="fixed inset-0 items-center justify-center bg-gray-800 bg-opacity-50 hidden">
+  <div class="bg-white rounded-lg p-6 w-96 shadow-lg text-center">
+    <h2 class="text-lg font-semibold text-gray-800">Item adicionado ao carrinho!</h2>
+    <p class="text-gray-600 mt-2">Seu item foi adicionado com sucesso.</p>
+    <div class="flex items-center">
+      <div class="w-1/2 text-right mr-4">
+        <a href="#carrinho">
+          <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-1 rounded focus:outline-none">
+            Ver carrinho
+          </button>
+        </a>
+      </div>
+      <div class="w-1/2 text-left ml-4">
+        <button id="close-modal" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-1 rounded focus:outline-none">
+          Fechar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="/js/LoadProducts.js"></script>

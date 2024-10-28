@@ -4,6 +4,23 @@ $(document).ready(() => {
   const container = $('#produtos-container');
   const loadingContainer = $('.loading-container');
   const searchResult = $('#search-result');
+  let timeoutId;
+
+  function showModal() {
+    const modal = $('#modal');
+    modal.removeClass('hidden');
+    modal.addClass('flex');
+
+    timeoutId = setTimeout(() => {
+      modal.addClass('hidden');
+      modal.removeClass('flex');
+    }, 10000);
+  }
+
+  $('#close-modal').click(() => {
+    clearTimeout(timeoutId);
+    $('#modal').addClass('hidden');
+  })
 
   function renderProductCard(produto) {
     const ratingStars = generateStars(produto.estrelas);
@@ -11,29 +28,36 @@ $(document).ready(() => {
       <div class="card bg-gray-100 py-2 px-3 mx-2 my-2 rounded shadow-md">
           <div class="flex flex-col">
             <a href="#produto/${produto.id}">
-            <div class="cursor-pointer">
-              <div class="flex justify-center w-full mb-4">
-                <img
-                  class="w-64 h-64" 
-                  src="${produto.imagem}"
-                />
-              </div>
-              <div class="flex items-center mb-2 text-gray-800">
-                <div class="w-1/2">
-                  <h1 class="text-lg font-bold">${produto.nome}</h1>
+              <div class="cursor-pointer">
+                <div class="flex justify-center w-full mb-4">
+                  <img
+                    class="w-64 h-64" 
+                    src="${produto.imagem}"
+                  />
                 </div>
-                <div class="w-1/2 text-right">
-                  <p class="text-2xl font-bold text-blue-600">R$${produto.preco}</p>
+                <div class="flex text-gray-800">
+                  <div class="w-2/3">
+                    <h1 class="font-bold" id="product-title">${produto.nome}</h1>
+                  </div>
+                  <div class="w-1/3 text-right">
+                    <p class="text-2xl font-bold text-blue-600">R$${produto.preco}</p>
+                  </div>
                 </div>
-              </div>
-              
-              <div id="products-stars" class="flex mb-2">${ratingStars}</div>
-              <p class="text-gray-500">${produto.quantidade} restantes</p>
-              
-            <div>
+                
+                <div class="flex items-center">
+                  <div class="w-1/2">
+                    <div id="products-stars" class="flex">${ratingStars}</div>
+                  </div>
+                  <div class="w-1/2 text-right ">
+                    <p class="text-gray-800 font-bold text-xs">Em estoque (${produto.quantidade})</p>
+                  </div>
+                </div>
+
+                <p class="text-gray-500 text-xs mt-4" id="product-description-home">${produto.description}</p>
+              <div>
             </a>
 
-            <button 
+            <button
               class="add-to-cart flex justify-center items-center w-full bg-blue-600 hover:bg-blue-700 transition-colors text-white rounded font-semibold mt-5 uppercase py-1" 
               data-id="${produto.id}"
             >
@@ -82,7 +106,7 @@ $(document).ready(() => {
   $(document).off('click', '.add-to-cart').on('click', '.add-to-cart', function() {
     const productId = $(this).data('id');
     addCartItem(productId, 1);
-    alert('Item adicionado ao carrinho!');
+    showModal();
     $('#cart-items-counter').html(getCartItemsAmount());
   });
 });
@@ -93,9 +117,9 @@ function generateStars(rating) {
 
   for (let i = 0; i < maxStars; i++) {
     if (i < rating) {
-      starsHtml += '<img src="/images/icons/star-filled.svg" width="20" height="20" alt="Estrela preenchida" />';
+      starsHtml += '<img class="mr-1" src="/images/icons/star-filled.svg" width="20" height="20" alt="Estrela preenchida" />';
     } else {
-      starsHtml += '<img src="/images/icons/star-empty.svg" width="20" height="20" alt="Estrela vazia" />';
+      starsHtml += '<img class="mr-1" src="/images/icons/star-empty.svg" width="20" height="20" alt="Estrela vazia" />';
     }
   }
   return starsHtml;

@@ -7,3 +7,25 @@
 body, html {
   height: 100%;
 }
+
+#product-title {
+  height: 3rem; /* Ajuste conforme necessário */
+  overflow: hidden; /* Esconde o texto excedente */
+  display: -webkit-box;
+  display: box; /* Fallback for line-clamp */
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+#product-description-home {
+  height: 4.0rem; /* Adjust height as necessary for three lines */
+  overflow: hidden;
+  display: -webkit-box;
+  display: box; /* Fallback for line-clamp */
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
