@@ -6,6 +6,22 @@ $(document).ready(function() {
 
   const productId = extractProductIdFromHash(window.location.hash);
 
+  function showModal() {
+    const modal = $('#modal');
+    modal.removeClass('hidden');
+    modal.addClass('flex');
+
+    timeoutId = setTimeout(() => {
+      modal.addClass('hidden');
+      modal.removeClass('flex');
+    }, 10000);
+  }
+
+  $('#close-modal').click(() => {
+    clearTimeout(timeoutId);
+    $('#modal').addClass('hidden');
+  })
+
   if (productId) {
     $.getJSON('/data/products.json', function(data) {
       const produto = data.produtos.find(p => p.id == productId);
@@ -22,10 +38,10 @@ $(document).ready(function() {
         $('#product-erro').html('<p>Produto não encontrado.</p>');
       }
 
-      $('.add-to-cart').click(function() {
+      $(document).off('click', '.add-to-cart').on('click', '.add-to-cart', function() {
         const productId = $(this).data('id');
         addCartItem(productId, 1);
-        alert('Item adicionado ao carrinho!');
+        showModal();
         $('#cart-items-counter').html(getCartItemsAmount())
       });
 
