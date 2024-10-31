@@ -1,5 +1,6 @@
 $(document).ready(function() {  
-  const contentElement = $('#content');    
+  const contentElement = $('#content');
+  const footer = $('footer-component');    
 
   function loadPage(page) {  
     $.get(page)  
@@ -25,9 +26,11 @@ $(document).ready(function() {
         break;
       case hash === '#sobre':
         loadPage(`${baseDir}sobre.html`);
+        footer.removeClass('hidden');
         break;
       case hash === '#contato':
         loadPage(`${baseDir}contato.html`);
+        footer.removeClass('hidden');
         break;
       case hash === '#carrinho':
         loadPage(`${baseDir}carrinho.html`);
