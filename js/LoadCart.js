@@ -23,13 +23,13 @@ $(document).ready(() => {
             total += productTotal;
 
             const cartItem = `
-              <div class="sm:flex border-b-2 my-6 py-4" data-id="${product.id}">
-                <div class="sm:w-3/12 flex justify-center">
+              <div class="sm:flex sm:items-center border-b-2 my-6 py-4" data-id="${product.id}">
+                <div class="sm:w-3/12 sm:mx-2 flex justify-center">
                   <img class="w-40 h-40" src="${product.imagem}" />
                 </div>
                 <div class="sm:w-3/12 mx-2 sm:mx-0">
                   <h1 class="text-lg">${product.nome}</h1>
-                  <h2 class="text-xs sm:text-sm">${product.description}</h2>
+                  <h2 class="text-sm sm:text-sm">${product.descricao}</h2>
                 </div>
                 <div class="sm:w-3/12 flex justify-center items-center">
                   <div>
