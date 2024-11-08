@@ -30,12 +30,16 @@ $(document).ready(function() {
         $('#product-name').text(produto.nome);
         $('#product-image').attr('src', produto.imagem);
         $('#product-price').text(`R$${produto.preco}`);
-        $('#product-description').text(produto.description);
+        $('#product-description').text(produto.descricao);
         $('#product-amount').text(`Em estoque (${produto.quantidade})`);
-
         $('.add-to-cart').attr('data-id', produto.id);
+
+        $('.product-container').removeClass('hidden');
+        $('.loading-container').addClass('hidden');
+        $('footer-component').removeClass('hidden');
       } else {
-        $('#product-erro').html('<p>Produto não encontrado.</p>');
+        window.location.href = '#inicio'
+        $('.loading-container').addClass('hidden');
       }
 
       $(document).off('click', '.add-to-cart').on('click', '.add-to-cart', function() {

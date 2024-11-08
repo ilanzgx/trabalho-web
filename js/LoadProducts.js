@@ -53,7 +53,7 @@ $(document).ready(() => {
                   </div>
                 </div>
 
-                <p class="text-gray-500 text-xs mt-4" id="product-description-home">${produto.description}</p>
+                <p class="text-gray-500 text-xs mt-4" id="product-description-home">${produto.descricao}</p>
               <div>
             </a>
 
