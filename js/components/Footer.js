@@ -76,15 +76,15 @@ class SpecialFooter extends HTMLElement {
         </div>
   
         <div class="md:w-6/12 w-2/3 flex justify-end items-center ">
-          <a href="#" class="px-3">
+          <a href="https://wa.me/558999794220" target="_blank" class="px-3">
             <img class="md:w-12 md:h-12 w-10 h-10 fill-current bg-blue-900 rounded-3xl sm:p-2" src="/images/icons/whatsapp.svg"  />
           </a>
 
-          <a href="#" class="px-3">
+          <a href="https://twitter.com" target="_blank" class="px-3">
             <img class="md:w-12 md:h-12 w-10 h-10 fill-current bg-blue-900 rounded-3xl sm:p-2" src="/images/icons/twitter.svg"  />
           </a>
   
-          <a href="#" class="px-3">
+          <a href="https://instagram.com" target="_blank" class="px-3">
             <img class="md:w-12 md:h-12 w-10 h-10 fill-current bg-blue-900 rounded-3xl sm:p-2" src="/images/icons/instagram.svg"  />
           </a>
         </div>
